@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { FaHome, FaNewspaper } from "react-icons/fa";
 
 class NavigationBar extends Component {
 
@@ -11,9 +12,9 @@ class NavigationBar extends Component {
         return (
             <div>
                 <div className="l-cs">
-                    <p className='navText'><a>Teatro</a></p>
+                    <p className='navText'><FaHome /><a>  Teatro</a></p>
                     <br />
-                    <p className='navText'><a>Poemas</a></p>
+                    <p className='navText'><FaNewspaper /><a>  Poemas</a></p>
                 </div>
             </div >
         );
