@@ -1,25 +1,20 @@
 import React from 'react';
 import logo from './logo.svg';
 import './styles.scss'
-
+import NavigationBar from './components/NavigationBar';
+import MainTitle from './components/MainTitle';
+import MainAddButton from './components/MainAddButton';
+import Piece from './components/Piece';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <NavigationBar />
+      <MainTitle title={"Artmix"}></MainTitle>
+      <MainAddButton></MainAddButton>
+      <Piece></Piece>
     </div>
+
   );
 }
 

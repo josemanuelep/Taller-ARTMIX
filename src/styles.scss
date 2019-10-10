@@ -1,36 +1,38 @@
 $textNav-color:white;
-$font-stack: 'Roboto', sans-serif;
+$font-stack: 'Roboto',
+sans-serif;
 
 .App {
-  font-family: sans-serif;
-  text-align: center;
+    font-family: sans-serif;
+    text-align: center;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
 }
+
 body {
-  font: 100% $font-stack;
+    font: 100% $font-stack;
 }
 
 *,
 *:before,
 *:after {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 @mixin clearfix() {
-  &:after {
-    content: ' ';
-    clear: both;
-  }
+    &:after {
+        content: ' ';
+        clear: both;
+    }
 }
 
 
 .l-cs {
-  @include clearfix;
-  background-image: linear-gradient(hotpink, tomato);
+    @include clearfix;
+    background-image: linear-gradient(hotpink, tomato);
     width: 15vw;
     height: 100vh;
     padding-left: 5%;
@@ -38,62 +40,70 @@ body {
     float: left;
 }
 
-.navText{
+.navText {
 
     color: $textNav-color;
 
 }
 
-.mainTitle{
+.mainTitle {
     text-align: center;
     padding-top: 1%;
 
 }
 
 @mixin button-bg($bg) {
-  background: $bg;
-  &:hover {
-    background:darken($bg,8%);
-    transition: all 0.3s ease;
-  }
-  &:active {
-    background:darken($bg,25%);
-  } 
+    background: $bg;
+
+    &:hover {
+        background: darken($bg, 8%);
+        transition: all 0.3s ease;
+    }
+
+    &:active {
+        background: darken($bg, 25%);
+    }
 }
 
 .btn {
-margin: 2%;
- color:white;
- text-decoration:none;
- padding:5px 10px;
- border-radius:3px;
+    margin: 2%;
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 3px;
 }
+
 .btn-red {
-   @include button-bg(#e74c3c);
+    @include button-bg(#e74c3c);
 }
 
 .flex-container {
-margin-top: 25px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+    margin-top: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
-.flex-container > div {
-  background-color: #f1f1f1;
-  width: 100px;
-  margin: 10px;
-  text-align: center;
-  line-height: 75px;
-  font-size: 30px;
+
+.flex-container>div {
+    background-color: #f1f1f1;
+    width: 200px;
+    height: 300px;
+    margin: 20px;
+    text-align: center;
+    line-height: 12px;
 }
-.Piece {
-  display: table;
-  img {
-  vertical-align: middle;
-  display: table-cell;
+
+
+
+img {
+    vertical-align: middle;
+    width: 200px;
+    height: auto;
+    margin-bottom: 10px;
 }
+
 span {
-  vertical-align: middle;
-  display: table-cell;
-}
+
+    font-size: 15px;
+
 }
