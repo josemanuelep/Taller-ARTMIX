@@ -108,6 +108,7 @@ class Piece extends React.Component {
             <div className="flex-container">
               {value.works.map(work =>
                 <div>
+                  {console.log(work)}
                   <span><img src={work.img} /></span>
                   <span>{work.name}</span>
                 </div>
@@ -133,12 +134,13 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-
+    this.addPieces();
     this.getPieces();
+
   }
   addPieces() {
     let tempArray = JSON.parse(localStorage.getItem('obras'))
-    if (tempArray.length == 0) {
+    if (tempArray == null) {
       const obras = [{ name: 'La Odisea', img: 'http://bit.ly/2OycArf' }, { name: 'La Cabaña del Tío Tom', img: 'http://bit.ly/35qoxVJ' }, { name: 'Frankenstein', img: 'http://bit.ly/33mc2sF' }];
       localStorage.setItem("obras", JSON.stringify(obras));
       console.log('Seed Pieces saved!');
